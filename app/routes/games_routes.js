@@ -60,7 +60,7 @@ router.get('/games/:id', requireToken, (req, res, next) => {
 // POST /examples
 router.post('/games', requireToken, (req, res, next) => {
   // set owner of new example to be current user
-  req.body.example.owner = req.user.id
+  req.body.games.owner = req.user.id
 
   Games.create(req.body.games)
   // respond to succesful `create` with status 201 and JSON of new "example"
@@ -78,7 +78,7 @@ router.post('/games', requireToken, (req, res, next) => {
 router.patch('/games/:id', requireToken, removeBlanks, (req, res, next) => {
   // if the client attempts to change the `owner` property by including a new
   // owner, prevent that by deleting that key/value pair
-  delete req.body.example.owner
+  delete req.body.games.owner
 
   Games.findById(req.params.id)
     .then(handle404)

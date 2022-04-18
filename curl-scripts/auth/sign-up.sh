@@ -1,7 +1,6 @@
 #!/bin/bash
-EMAIL="cgj@cgj.com"
-PASSWORD="cgj"
-PASSWORD_CONFIRMATION="cgj"
+
+
 API="http://localhost:4741"
 URL_PATH="/sign-up"
 

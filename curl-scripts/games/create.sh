@@ -1,13 +1,20 @@
-TITLE="Legend of Zelda"
-GENRE="RPG"
+#!/bin/bash
 
-curl 'http://localhost:4741/games' \
+
+API="http://localhost:4741"
+URL_PATH="/games"
+
+curl "${API}${URL_PATH}" \
   --include \
   --request POST \
   --header "Content-Type: application/json" \
+  --header "Authorization: Bearer ${TOKEN}" \
   --data '{
-    "games": {
+    "game": {
       "title": "'"${TITLE}"'",
-      "genre": "'"${GENRE}"'"
+      "body": "'"${BODY}"'",
+      "rating": "'"${RATING}"'"
     }
   }'
+
+echo

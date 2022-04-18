@@ -1,6 +1,5 @@
 #!/bin/bash
-EMAIL="cgj@cgj.com"
-PASSWORD="cgj"
+
 API="http://localhost:4741"
 URL_PATH="/sign-in"
 

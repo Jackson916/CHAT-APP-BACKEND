@@ -1,23 +1,30 @@
+'use strict'
+
 const mongoose = require('mongoose')
 
-const reviewSchema = require('./review')
-
-const GamesSchema = new mongoose.Schema(
-  {
-    name: {
-      type: String,
-      required: true
-    },
-    genre: {
-      type: String,
-      required: true
-    },
-
-    review: [reviewSchema]
-  },
-  {
-    timestamps: true
-  }
+const gamesSchema = new mongoose.Schema(
+	{
+		title: {
+			type: String,
+			required: true,
+		},
+		body: {
+			type: String,
+			required: true,
+		},
+		rating: {
+			type: String,
+			required: true,
+		},
+		owner: {
+			type: mongoose.Schema.Types.ObjectId,
+			ref: 'User',
+			required: true,
+		},
+	},
+	{
+		timestamps: true,
+	}
 )
 
-module.exports = mongoose.model('Games', GamesSchema)
+module.exports = mongoose.model('Games', gamesSchema)

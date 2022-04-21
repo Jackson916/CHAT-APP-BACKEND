@@ -1,31 +1,24 @@
-**description**
-An Api that allows you to upload video game reviews.
+**Description** 
+
+This app will allow you to post your favorite games into an open library with a review for others to see and use.
 
 
+**User Stories**
 
+The User will be able to make an account 
 
-**User Story** 
-The user will be able to make an account 
+The User will be able to sign into acoount 
 
-The user will be able to sign in to said account 
+The User will be change password on account
 
-The user will be able to change password on the account
+The User will be able to sign out when finished 
 
-The user will be able to upload a game review 
+The User will be able to post there game with a review
 
-The User will be able to sign out when done
+The User will be able to look at a list of games with reviews from others
 
-
-
-
-
-
-**WireFrame**
-
-
+**Wireframe** 
+![Wireframe](public/Wireframe.png)
 
 **ERD**
-
-
-
-deployment url
+![ERD](public/ERD.png)

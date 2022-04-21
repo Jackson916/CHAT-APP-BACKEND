@@ -2,13 +2,13 @@
 
 const mongoose = require('mongoose')
 
-const gamesSchema = new mongoose.Schema(
+const gameSchema = new mongoose.Schema(
 	{
 		title: {
 			type: String,
 			required: true,
 		},
-		body: {
+		description: {
 			type: String,
 			required: true,
 		},
@@ -27,4 +27,4 @@ const gamesSchema = new mongoose.Schema(
 	}
 )
 
-module.exports = mongoose.model('Games', gamesSchema)
+module.exports = mongoose.model('Game', gameSchema)

@@ -1,7 +1,7 @@
 #!/bin/bash
 
 API="http://localhost:4741"
-URL_PATH="/games"
+URL_PATH="/game"
 
 curl "${API}${URL_PATH}/${ID}" \
   --include \
@@ -9,9 +9,8 @@ curl "${API}${URL_PATH}/${ID}" \
   --header "Content-Type: application/json" \
 --header "Authorization: Bearer ${TOKEN}" \
 --data '{
-    "games": {
-      "title": "'"${TITLE}"'",
-      "body": "'"${BODY}"'",
+    "game": {
+      "description": "'"${DESCRIPTION}"'",
       "rating": "'"${RATING}"'"
     }
   }'

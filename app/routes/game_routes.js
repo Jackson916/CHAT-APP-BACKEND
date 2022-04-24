@@ -4,7 +4,7 @@ const express = require('express')
 const passport = require('passport')
 
 // pull in Mongoose model for examples
-const Game = require('../models/games')
+const Game = require('../models/game')
 
 // this is a collection of methods that help us detect situations when we need
 // to throw a custom error
@@ -53,7 +53,6 @@ router.get('/game', requireToken, (req, res, next) => {
 router.post('/game', requireToken, (req, res, next) => {
 	// set owner of new example to be current user
 	req.body.game.owner = req.user.id
-
 	Game.create(req.body.game)
 		// respond to successful `create` with status 201 and JSON of new "example"
 		.then((game) => {

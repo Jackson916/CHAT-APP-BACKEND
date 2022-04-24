@@ -1,5 +1,5 @@
 API="http://localhost:4741"
-URL_PATH="/games"
+URL_PATH="/game"
 
 
 curl "${API}${URL_PATH}/${ID}" \

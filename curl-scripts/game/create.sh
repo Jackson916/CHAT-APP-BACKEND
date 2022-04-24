@@ -1,8 +1,7 @@
-#!/bin/bash
-
+#!/bin/bash 
 
 API="http://localhost:4741"
-URL_PATH="/games"
+URL_PATH="/game"
 
 curl "${API}${URL_PATH}" \
   --include \
@@ -12,7 +11,7 @@ curl "${API}${URL_PATH}" \
   --data '{
     "game": {
       "title": "'"${TITLE}"'",
-      "body": "'"${BODY}"'",
+      "description": "'"${DESCRIPTION}"'",
       "rating": "'"${RATING}"'"
     }
   }'

@@ -5,7 +5,7 @@ const cors = require('cors')
 
 // require route files
 const userRoutes = require('./app/routes/user_routes')
-const gamesRoutes = require('./app/routes/games_routes')
+const gameRoutes = require('./app/routes/game_routes')
 
 // require middleware
 const errorHandler = require('./lib/error_handler')
@@ -54,7 +54,7 @@ app.use(requestLogger)
 
 // register route files
 app.use(userRoutes)
-app.use(gamesRoutes)
+app.use(gameRoutes)
 
 // register error handling middleware
 // note that this comes after the route middlewares, because it needs to be

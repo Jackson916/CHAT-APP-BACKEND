@@ -1,5 +1,7 @@
 #!/bin/bash
-
+# OLDPW="add"
+# NEWPW="maybethis"
+# TOKEN="139bb4d4b2b07ff9cceea631161f406b"
 API="http://localhost:4741"
 URL_PATH="/change-password"
 
